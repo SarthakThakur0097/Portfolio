@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import App from '../App';
 import MobileRightMenuSlider from "@material-ui/core/Drawer"
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import Footer from "./Footer";
 import {
 AppBar,
 Toolbar,
@@ -111,6 +112,7 @@ const Navbar = () => {
                         onClose={toggleSlider("right", false)}
                         >
                             {slideList("right")}
+                            <Footer/>
                         </MobileRightMenuSlider>
                     </Toolbar>
                 </AppBar>
