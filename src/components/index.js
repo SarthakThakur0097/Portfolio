@@ -2,7 +2,11 @@ import React from 'react'
 import NavBar from "./Navbar"
 import Header from "./Header"
 import Particles from "react-particles-js"
+import Slideshow from "./Slideshow/SlideShow"
 import {makeStyles, mergeClasses} from "@material-ui/styles"
+import {
+    Box,
+} from "@material-ui/core";
 const useStyles = makeStyles({
     particlesCanva: {
         position: "absolute",
@@ -57,6 +61,7 @@ const Home = () => {
             }
         }}
         />
+
         </>
     )
 }

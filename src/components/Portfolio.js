@@ -13,20 +13,24 @@ import {
     Avatar
 } from "@material-ui/core";
 import Navbar from './Navbar';
-import project1 from "../images/html-css-javascript-lg.jpg";
+import project1 from "../images/Dotnetmvc5-PixTeller.png";
 import project2 from "../images/javascript-fullstack.jpg";
 import project3 from "../images/react-redux.jpg";
 import project4 from "../images/mern-stack.jpg";
-
+import Slideshow from "./Slideshow/SlideShow"
 const useStyles = makeStyles({
     mainContainer: {
         background: "#233",
-        height: "100%"
+        height: "100%",
+        
     },
     cardContainer: {
         maxWidth: 345,
         margin: "3rem",
         margin: "5rem auto"
+    },
+    slideShowContainer: {
+        marginRight: '20px'
     }
 });
 
@@ -34,22 +38,22 @@ const Portfolio = () => {
     const classes = useStyles()
     return (
         <>
-        <Box component="div" className={classes.mainContainer}>
-            <Navbar/>
-            <Grid container justify="center" >
+            <Box justify="center">
+                <Navbar/>
+                <Grid container justify="center" >
                 {/* Project 1*/}
                 <Grid item xs={12} sm={8} md={6}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia
                             component="img"
-                            alt="Project 1"
+                            alt="Bryant University"
                             height="140"
                             image={project1}   
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5">
-                                    Project 1 
+                                    Gwent
                                 </Typography>
                                 <Typography  variant="body2" color="textSecondary" component="p">
                                     lorem30 
@@ -74,11 +78,11 @@ const Portfolio = () => {
                                 component="img"
                                 alt="Project 2"
                                 height="140"
-                                image={project2}   
+                                image={project1}   
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5">
-                                        Project 2 
+                                        Bryant University
                                     </Typography>
                                     <Typography  variant="body2" color="textSecondary" component="p">
                                         lorem30 
@@ -155,6 +159,23 @@ const Portfolio = () => {
                         </Card>
                     </Grid>
                 </Grid>
+                {/* <Box
+                     style={{margin:'1000'}}
+                >
+                    <Slideshow
+                        className={classes.slideShowContainer}
+                        align="center"
+                        interval={3000}
+                        images={[
+                            project1,
+                            project2,
+                            project3,
+                            project4,
+                            project4,
+                            project4
+                        ]}
+                    />
+                </Box> */}
             </Box>
         </>
     );

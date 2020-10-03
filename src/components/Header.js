@@ -57,6 +57,32 @@ const Header = () => {
                 loop
                 />
             </Typography>
+            <br/>
+            <Typography
+             className={classes.title}
+             variant="h4">
+                Skills
+            </Typography>
+            <br/>
+            <Typography 
+            className={classes.subtitle}
+            variant="h5"
+            >
+                <Typed strings={[".NET/C#"]} typeSpeed={105}/>
+                <br/>
+                <Typed strings={["Java"]} typeSpeed={105}/>
+                <br/>
+                <Typed strings={["JavaScript"]} typeSpeed={105}/>
+                <br/>
+                <Typed strings={["HTML/CSS"]} typeSpeed={105}/>
+                <br/>
+                <Typed strings={["SQL"]} typeSpeed={105}/>
+                <br/>
+                <Typed strings={["Swift"]} typeSpeed={105}/>
+                <br/>
+                <Typed strings={["Kotlin"]} typeSpeed={105}/>
+
+            </Typography>
         </Box>
     );
 };
