@@ -1,11 +1,14 @@
 import React from 'react'
 import {makeStyles} from '@material-ui/core/styles';
-import {Typography, Box} from "@material-ui/core";
+import {Typography, Box, Avatar} from "@material-ui/core";
 import Navbar from "./Navbar";
+import Particles from "react-particles-js"
+import appAcademy from "../images/appAcademy-removebg-preview.png"
+import pseg from "../images/pseglogo-removebg-preview.png"
 
 const useStyles = makeStyles(theme=>({
     mainContainer: {
-        background: "#233"
+        background: ""
     },
     timeLine: {
         position: "relative",
@@ -67,7 +70,12 @@ const useStyles = makeStyles(theme=>({
             }
         }
     },
-
+    avatar: {
+        // display: "block",
+        // margin: "0.5rem auto",
+        // width: theme.spacing(13),
+        // height: theme.spacing(13)
+    },
     timeLineYear: {
         textAlign: "center",
         maxWidth: "9.375rem",
@@ -110,6 +118,7 @@ const Resume = () => {
         <>
             <Navbar/>
             <Box component="header" className={classes.mainContainer}>
+
                 <Typography className={classes.heading} variant="h4" align="center">
                     working experience
                 </Typography>
@@ -118,31 +127,105 @@ const Resume = () => {
                         2019
                     </Typography>
                     <Box component="div" className={classes.timeLineItem}>
+                        <Avatar src={appAcademy} alt="Sarthak Thakur" style={{ justifyContent: "center", display: "flex" }} />   
                         <Typography variant="h5" align="center" className={classes.subHeading}>
-                            Web Design
+                            Full-Stack .NET Web Development
                         </Typography>
                         <Typography variant="body1" align="center" style={{color: "tomato"}}>
-                            company name where worked
+                            app Academy
                         </Typography>
                         <Typography variant="subtitle" align="center" style={{color: "tan"}}>
-                            lorem30
+                        -Attended an intensive full-stack web development bootcamp.
+                        <br/>
+                        -Designed and developed various applications using technologies ranging from ASP.NET WebForms, ASP.NET MVC, C#, Javascript, Sql Server.
+                        <br/>
+                        -Collaborated with other students on various projects using git
                         </Typography>
                     </Box>
                     <Typography variant="h2" className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
-                        2014
+                        2020
                     </Typography>
                     <Box component="div" className={classes.timeLineItem}>
+                    <Avatar src={pseg} alt="Sarthak Thakur" style={{ justifyContent: "center", display: "flex" }} />   
                         <Typography variant="h5" align="center" className={classes.subHeading}>
-                            HTML and CSS
+                            IT Professional - DevOps Engineer
                         </Typography>
                         <Typography variant="body1" align="center" style={{color: "tomato"}}>
-                            company name where worked
+                            PSEG Li
                         </Typography>
                         <Typography variant="subtitle" align="center" style={{color: "tan"}}>
-                            lorem30
+                        -Decreased time required to report live outages on android and ios app by 500% using Java and Kotlin 
+                        <br/>
+                        -Improved user experience by fixing various bugs and crashes within the app 
+                        <br/>
+                        -Worked in a team delivering many user stories
                         </Typography>
                     </Box>
                     {/* Next Experience Date */}
+                    <Typography variant="h2" className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
+                        Current
+                    </Typography>
+                    {/* <Box component="div" className={classes.timeLineItem}>
+                        <Avatar src={appAcademy} alt="Sarthak Thakur" style={{ justifyContent: "center", display: "flex" }} />   
+                        <Typography variant="h5" align="center" className={classes.subHeading}>
+                            Full-Stack .NET Web Development
+                        </Typography>
+                        <Typography variant="body1" align="center" style={{color: "tomato"}}>
+                            app Academy
+                        </Typography>
+                        <Typography variant="subtitle" align="center" style={{color: "tan"}}>
+                        -Attended an intensive full-stack web development bootcamp.
+                        </Typography>
+                        <br/>
+                        <Typography variant="subtitle" align="center" style={{color: "tan"}}>
+                        -Designed and developed various applications using technologies ranging from ASP.NET WebForms, ASP.NET Mvc, C#, Javascript, Sql Server.
+                        </Typography>
+                        <br/>
+                        <Typography variant="subtitle" align="center" style={{color: "tan"}}>
+                        -Collaborated with other students on various projects using git
+                        </Typography>
+                    </Box> */}
+                    <Particles
+                        canvasClassName={classes.particlesCanva}
+                            param={{
+                            particles:{
+                                number:{
+                                    value:150,
+                                    density: {
+                                        enable: true,
+                                        value_area:150
+                                    }
+                                },
+                                shape: {
+                                    type: "circle",
+                                    stroke: {
+                                        width: 30,
+                                        color: 'tomato'
+                                    }
+                                },
+                                size: {
+                                    value: 15, 
+                                    random: true,
+                                    anim: {
+                                        enable: false,
+                                        speed:8,
+                                        size_min: 0.1,
+                                        sync: true
+                                    }
+                                },
+                                opacity: {
+                                    value: 1,
+                                    random: true,
+                                    anim: {
+                                        enable: true,
+                                        speed: 1,
+                                        opacity_min: 0.1,
+                                        sync: true
+                                    }
+                                }
+                            }
+                        }}
+                    />
                 </Box>
             </Box>
         </>

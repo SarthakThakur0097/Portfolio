@@ -25,6 +25,7 @@ const useStyles = makeStyles({
 const Footer = () => {
 
     const classes = useStyles()
+
     return (
         <BottomNavigation width="auto" style={{background: "#222"}}>
             <BottomNavigationAction
