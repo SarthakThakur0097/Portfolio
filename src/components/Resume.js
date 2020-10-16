@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import Particles from "react-particles-js"
 import appAcademy from "../images/appAcademy-removebg-preview.png"
 import pseg from "../images/pseglogo-removebg-preview.png"
-
+import owLogo from "../images/OldWestburyLogo-removebg-preview.png"
 const useStyles = makeStyles(theme=>({
     mainContainer: {
         background: ""
@@ -120,9 +120,28 @@ const Resume = () => {
             <Box component="header" className={classes.mainContainer}>
 
                 <Typography className={classes.heading} variant="h4" align="center">
-                    working experience
+                    experience
                 </Typography>
                 <Box component="div" className={classes.timeLine}>
+                <Typography variant="h2" className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
+                        2015
+                    </Typography>
+                    <Box component="div" className={classes.timeLineItem}>
+                        <Avatar src={owLogo} alt="Sarthak Thakur" style={{ justifyContent: "center", display: "flex" }} />   
+                        <Typography variant="h5" align="center" className={classes.subHeading}>
+                            SUNY Old Westbury
+                        </Typography>
+                        <Typography variant="body1" align="center" style={{color: "tomato"}}>
+                            Bachelor of Science in Computer Information and Systems
+                        </Typography>
+                        {/* <Typography variant="subtitle" align="center" style={{color: "tan"}}>
+                        -Attended an intensive full-stack web development bootcamp.
+                        <br/>
+                        -Designed and developed various applications using technologies ranging from ASP.NET WebForms, ASP.NET MVC, C#, Javascript, Sql Server.
+                        <br/>
+                        -Collaborated with other students on various projects using git
+                        </Typography> */}
+                    </Box>
                     <Typography variant="h2" className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
                         2019
                     </Typography>

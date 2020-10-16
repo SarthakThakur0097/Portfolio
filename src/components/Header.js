@@ -7,14 +7,17 @@ import {
     Grid,
     Box
 } from "@material-ui/core"
-import avatar from "../images/avatar.png"
+import avatar from "../images/Sarthak_Shakur.png"
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { LinkedIn, GitHub } from '@material-ui/icons'
+import { IconButton } from '@material-ui/core';
 
 //CSS STYLES
 
 const useStyles = makeStyles(theme=> ({
     avatar: {
-        width: theme.spacing(15),
-        height: theme.spacing(15),
+        width: theme.spacing(30),
+        height: theme.spacing(30),
         margin: theme.spacing(1),
     },
     title: {
@@ -74,6 +77,8 @@ const Header = () => {
                 <br/>
                 <Typed strings={["JavaScript"]} typeSpeed={105}/>
                 <br/>
+                <Typed strings={["Python"]} typeSpeed={105}/>
+                <br/>
                 <Typed strings={["HTML/CSS"]} typeSpeed={105}/>
                 <br/>
                 <Typed strings={["SQL"]} typeSpeed={105}/>
@@ -83,6 +88,14 @@ const Header = () => {
                 <Typed strings={["Kotlin"]} typeSpeed={105}/>
 
             </Typography>
+            <Box>
+            <IconButton aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/sarthak-thakur-b9b6ba187/')}>
+                <LinkedInIcon style={{color: " #2867B2"}} fontSize="large" />
+            </IconButton>
+            <IconButton aria-label="Linkedin.com" onClick={() => window.open('https://github.com/SarthakThakur0097')}>
+                <GitHub style={{color: " #333"}} fontSize="large" />
+            </IconButton>
+            </Box>
         </Box>
     );
 };

@@ -20,12 +20,13 @@ makeStyles
 
 import {
 ArrowBack,
+Menu,
 AssignmentInd,
 Home,
 Apps,
 ContactMail
 } from "@material-ui/icons"
-import avatar from "../images/avatar.png"
+import avatar from "../images/Sarthak_Shakur.png"
 
 //CSS STYLES
 const useStyles = makeStyles(theme=>({
@@ -103,9 +104,9 @@ const Navbar = () => {
                 <AppBar position="static" style={{background: "#222"}}>
                     <Toolbar>
                         <IconButton onClick={toggleSlider("right", true)}>
-                            <ArrowBack style={{color: "tomato"}}/>
+                            <Menu style={{color: "tomato"}}/>
                         </IconButton>
-                        <Typography variant="h5" style={{color: "tan"}}>Portfolio</Typography>
+                        <Typography variant="h5" style={{color: "tan"}}></Typography>
                         <MobileRightMenuSlider 
                         anchor="right" 
                         open={state.right}
